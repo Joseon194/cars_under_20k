@@ -7,3 +7,9 @@ Show a list cars that are under 20k
 3. Subaru Impreza 5-Door – Base Price: $19,980
 4. Volkswagen Jetta – Base Price: $19,640
 5. Chevrolet Cruze Sedan – Base Price: $18,870
+
+A car has:
+
+A name
+A model year
+A price

@@ -2,7 +2,6 @@
 class CarsUnder20k::CLI
   
   def call
-    puts "Cars Under 20k:"
     list_cars
     menu
     goodbye
@@ -11,18 +10,20 @@ class CarsUnder20k::CLI
   def list_cars
     puts "Top 5 Cars Under 20k"
     puts <<-DOC
-    1. Hyundai Accent – Base Price: $15,915
-    2. Toyota Yaris Sedan – Base Price: $16,380
-    3. Subaru Impreza 5-Door – Base Price: $19,980
-    4. Volkswagen Jetta – Base Price: $19,640
-    5. Chevrolet Cruze Sedan – Base Price: $18,870
+    1. Hyundai Accent
+    2. Toyota Yaris Sedan
+    3. Subaru Impreza 5-Door
+    4. Volkswagen Jetta
+    5. Chevrolet Cruze Sedan
     DOC
+    @cars = CarsUnder20k::Car.thisyear
   end
   
   def menu
-    puts "Enter the number of the car you would like more info on:"
+   
     input = nil
     while input != "exit"
+     puts "Enter the number of the car you would like more info on or type list to see the cars again or type exit to leave:"
     input = gets.strip.downcase
     case input
     when "1"
@@ -34,11 +35,12 @@ class CarsUnder20k::CLI
     when "4"
       puts "More info on Volkswagen Jetta..."
     when "5"
-      puts "More info on Chevrolet Cruze Sedan"
+      puts "More info on Chevrolet Cruze Sedan..."
+      when "list"
+        list cars
+      else
+        puts "Not sure what you want, please type list or exit."
   end
-end 
-end
-end 
 end 
 end
 
