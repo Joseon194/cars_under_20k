@@ -1,5 +1,5 @@
 # our CLI controller
-class Cars_Under_20k::CLI
+class CarsUnder20k::CLI
   
   def call
     
