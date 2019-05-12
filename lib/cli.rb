@@ -37,7 +37,7 @@ class CarsUnder20k::CLI
     when "5"
       puts "More info on Chevrolet Cruze Sedan..."
       when "list"
-        list cars
+        list_cars
       else
         puts "Not sure what you want, please type list or exit."
   end
