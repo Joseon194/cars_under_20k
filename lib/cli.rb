@@ -25,6 +25,12 @@ class CarsUnder20k::CLI
     while input != "exit"
      puts "Enter the number of the car you would like more info on or type list to see the cars again or type exit to leave:"
     input = gets.strip.downcase
+    if input.to_i > 0
+      puts @cars[input.to_i-1]
+    elsif input == "list_cars"
+    list deals
+  else
+    puts
     case input
     when "1"
       puts "More info on Hyundai Accent..."
