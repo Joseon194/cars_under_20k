@@ -1,5 +1,4 @@
-# our CLI controller
-require_relative '../cars_under_20k.rb'
+require_relative './cars_under_20k.rb'
 
 class CarsUnder20k::CLI
   
@@ -10,31 +9,28 @@ class CarsUnder20k::CLI
   end
   
   def list_cars
-    puts "Top 5 Cars Under 20k"
-    puts <<-DOC
-    1. Hyundai Accent
-    2. Toyota Yaris Sedan
-    3. Subaru Impreza 5-Door
-    4. Volkswagen Jetta
-    5. Chevrolet Cruze Sedan
-    DOC
+    puts "Top 5 Cars Under 20k:"
     @cars = CarsUnder20k::Car.thisyear
-  end
-  
+    @cars.each.with_index(1) do |car, i|
+      puts "#{i}. #{car.name} - #{car.price} - #{car.gasmileage}"
+  end 
+end
+
   def menu
-   
     input = nil
     while input != "exit"
      puts "Enter the number of the car you would like more info on or type list to see the cars again or type exit to leave:"
     input = gets.strip.downcase
+    
     if input.to_i > 0
-      puts @cars[input.to_i-1]
-    elsif input == "list_cars"
-    list cars
+      the_car = @cars[input.to_i-1]
+      puts "#{car.name} - #{car.price} - #{car.gasmileage}"
+    elsif input == "list"
+    list_cars
       else
         puts "Not sure what you want, please type list or exit."
-  end
-end 
+    end
+  end 
 end
 
   def goodbye

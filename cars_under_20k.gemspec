@@ -18,9 +18,9 @@ Gem::Specification.new do |spec|
   if spec.respond_to?(:metadata)
     spec.metadata["allowed_push_host"] = " Set to 'http://mygemserver.com'"
 
-    spec.metadata["homepage_uri"] = "Put your gem's website or public repo URL here."
-    spec.metadata["source_code_uri"] = " Put your gem's public repo URL here."
-    spec.metadata["changelog_uri"] = " Put your gem's CHANGELOG.md URL here."
+    spec.metadata["homepage_uri"] = "http://rubygems.org/gems/cars_under_20k"
+    spec.metadata["source_code_uri"] = "https://github.com/Joseon194/cars_under_20k"
+    spec.metadata["changelog_uri"] = "https://github.com/Joseon194/cars_under_20k/blob/master/README.md"
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
       "public gem pushes."
@@ -37,4 +37,8 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "rspec"
+  spec.add_development_dependency "pry"
+  
+   spec.add_dependency "nokogiri"
 end
