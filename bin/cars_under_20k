@@ -2,4 +2,4 @@
 
 require './lib/cars_under_20k'
 
-CARS_UNDER_20K::CLI.new.call
+CarsUnder20k::CLI.new.call
