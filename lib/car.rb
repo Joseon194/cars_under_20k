@@ -38,6 +38,8 @@ class CarsUnder20k::Car
     car_5.price = "$18,870"
     car_5.gasmileage = "28 City / 38 Highway"
     car_5.url = "https://www.kbb.com/chevrolet/cruze/2019/" 
+    
+    [car_1, car_2, car_3, car_4, car_5]
   end
 end
     

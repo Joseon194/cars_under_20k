@@ -28,22 +28,7 @@ class CarsUnder20k::CLI
     if input.to_i > 0
       puts @cars[input.to_i-1]
     elsif input == "list_cars"
-    list deals
-  else
-    puts
-    case input
-    when "1"
-      puts "More info on Hyundai Accent..."
-    when "2"
-      puts "More info on Toyota Yaris Sedan..."
-    when "3"
-      puts "More info on Subaru Impreza 5-Door..."
-    when "4"
-      puts "More info on Volkswagen Jetta..."
-    when "5"
-      puts "More info on Chevrolet Cruze Sedan..."
-      when "list"
-        list_cars
+    list cars
       else
         puts "Not sure what you want, please type list or exit."
   end
