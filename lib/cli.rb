@@ -5,6 +5,7 @@ class CarsUnder20k::CLI
     puts "Cars Under 20k:"
     list_cars
     menu
+    goodbye
   end
   
   def list_cars
@@ -20,6 +21,28 @@ class CarsUnder20k::CLI
   
   def menu
     puts "Enter the number of the car you would like more info on:"
+    input = nil
+    while input != "exit"
+    input = gets.strip.downcase
+    case input
+    when "1"
+      puts "More info on Hyundai Accent..."
+    when "2"
+      puts "More info on Toyota Yaris Sedan..."
+    when "3"
+      puts "More info on Subaru Impreza 5-Door..."
+    when "4"
+      puts "More info on Volkswagen Jetta..."
+    when "5"
+      puts "More info on Chevrolet Cruze Sedan"
   end
-  
+end 
+end
+end 
+end 
+end
+
+  def goodbye
+    puts "Goodbye! Hope you enjoyed our list!"
+  end
 end
