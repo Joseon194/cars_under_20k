@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require './lib/cars_under_20k'
+
+CARS_UNDER_20K::CLI.new.call
