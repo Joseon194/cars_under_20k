@@ -1,5 +1,6 @@
 class CarsUnder20k::Car
-  attr_accessor :name, ,:price, :gasmileage, :url
+  attr_accessor :name ,:price, :gasmileage, :url
+  
   def self.thisyear
       puts <<-DOC
     1. Hyundai Accent

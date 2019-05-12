@@ -1,3 +1,3 @@
 require_relative "./cars_under_20k/version"
-require_relative './cli.rb'
-require_relative './car.rb'
+require_relative './cli'
+require_relative './car'

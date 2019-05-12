@@ -1,4 +1,6 @@
 # our CLI controller
+require_relative '../cars_under_20k.rb'
+
 class CarsUnder20k::CLI
   
   def call
