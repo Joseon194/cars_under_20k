@@ -2,7 +2,6 @@ class CarsUnder20k::Car
   attr_accessor :name ,:price, :gasmileage, :url
   
   def self.thisyear
-    
     self.scrape_cars
   end
   
@@ -12,7 +11,7 @@ class CarsUnder20k::Car
     def self.scrape_cars
       cars = []
       
-      cars << self.scrape_kbb
+      cars << self.scrape_cad
       
       
       #go to kbb, find the car
@@ -22,8 +21,8 @@ class CarsUnder20k::Car
       cars
     end
     
-    def self.scrape_kbb
-      doc = Nokogiri::HTML(open("https://www.kbb.com"))
+    def self.scrape_cad
+      doc = Nokogiri::HTML(open("https://www.caranddriver.com"))
       binding.pry
     end
   end
