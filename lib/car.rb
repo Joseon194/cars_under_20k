@@ -11,7 +11,7 @@ class CarsUnder20k::Car
     def self.scrape_cars
       cars = []
       
-      cars << self.scrape_cad
+      cars << self.scrape_motortrend
       
       
       #go to kbb, find the car
@@ -21,8 +21,8 @@ class CarsUnder20k::Car
       cars
     end
     
-    def self.scrape_cad
-      doc = Nokogiri::HTML(open("https://www.caranddriver.com"))
+    def self.scrape_motortrend
+      doc = Nokogiri::HTML(open("https://www.motortrend.com"))
       binding.pry
     end
   end
