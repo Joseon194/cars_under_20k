@@ -22,7 +22,7 @@ class CarsUnder20k::Car
     end
     
     def self.scrape_autotrader
-      doc = Nokogiri::HTML(open("https://www.autotrader.com/cars-for-sale/Ridgefield+NJ-07657?searchRadius=0&zip=07657&maxPrice=19000&marketExtension=true&minPrice=15000&sortBy=derivedpriceDESC&numRecords=25&firstRecord=0"))
+      doc = Nokogiri::HTML(open("https://www.autotrader.com/cars-for-sale/cars+under+20000"))
       binding.pry
     end
   end
